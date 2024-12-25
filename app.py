@@ -84,7 +84,7 @@ def showPhoto(employeeId,employeeName):
       response = requests.request("GET", url, headers=headers, data=payload)
 
       img = Image.open(BytesIO(response.content))
-      st.image(img, caption=employeeName, use_column_width=False)
+      st.image(img, caption=employeeName, use_container_width =False)
 
 # Display a header
 st.header("The System")
